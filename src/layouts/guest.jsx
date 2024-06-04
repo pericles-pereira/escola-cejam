@@ -96,7 +96,7 @@ export default function GuestLayout({
     flex-direction: row;
     flex-wrap: ${isMobile ? "wrap" : "nowrap"};
     justify-content: center;
-    gap: ${isMobile ? "4px" : isTablet ? "16px" : isDesktop ? "18px" : "44px"};
+    gap: ${isMobile ? "8px" : isTablet ? "16px" : isDesktop ? "18px" : "44px"};
     margin-right: ${isMobile
       ? "0px"
       : isTablet
