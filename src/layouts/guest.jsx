@@ -116,7 +116,7 @@ export default function GuestLayout({
   const AppBarButton = styled.button`
     font-family: "Jost", sans-serif;
     font-size: ${isMobile
-      ? "18px"
+      ? "21px"
       : isTablet
       ? "25px"
       : isDesktop
