@@ -1,11 +1,138 @@
 "use client";
 
+import useBreakpoints from "@/src/hooks/useBreakpoints";
 import styled from "@emotion/styled";
 import { Box } from "@mui/material";
+import { forwardRef } from "react";
 
-export default function HomeCards() {
+const HomeCards = forwardRef((props, ref) => {
+  const { isDesktop, isMobile, isTablet } = useBreakpoints();
+
+  const Container = styled(Box)`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: ${isMobile ? "30px" : isTablet ? "48px" : isDesktop ? "62px" : "78px"};
+    row-gap: 64px;
+    margin-bottom: ${isMobile
+      ? "50px"
+      : isTablet
+      ? "60px"
+      : isDesktop
+      ? "80px"
+      : "105px"};
+    margin-top: ${isMobile
+      ? "60px"
+      : isTablet
+      ? "80px"
+      : isDesktop
+      ? "100px"
+      : "120px"};
+  `;
+
+  const Card = styled(Box)`
+    display: flex;
+    flex-direction: column;
+    padding-inline: ${isMobile
+      ? "14px"
+      : isTablet
+      ? "16px"
+      : isDesktop
+      ? "20px"
+      : "24px"};
+    padding-top: ${isMobile
+      ? "34px"
+      : isTablet
+      ? "44px"
+      : isDesktop
+      ? "54px"
+      : "84px"};
+    padding-bottom: ${isMobile
+      ? "24px"
+      : isTablet
+      ? "28px"
+      : isDesktop
+      ? "32px"
+      : "42px"};
+    border-radius: ${isMobile
+      ? "24px"
+      : isTablet
+      ? "26px"
+      : isDesktop
+      ? "28px"
+      : "32px"};
+    background-color: #f6f6f6;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    max-width: ${isMobile
+      ? "374px"
+      : isTablet
+      ? "374px"
+      : isDesktop
+      ? "344px"
+      : "474px"};
+    width: auto;
+    height: auto;
+    cursor: pointer;
+
+    :hover {
+      scale: 1.1;
+    }
+
+    img {
+      margin-inline: auto;
+      margin-bottom: 32px;
+    }
+
+    div {
+      margin-inline: auto;
+      max-width: ${isMobile
+        ? "210px"
+        : isTablet
+        ? "210px"
+        : isDesktop
+        ? "210px"
+        : "299px"};
+      width: 100%;
+      height: 4px;
+      background-color: #ffe500;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      font-family: "JostSemiBold", sans-serif;
+      font-size: ${isMobile
+        ? "29px"
+        : isTablet
+        ? "29px"
+        : isDesktop
+        ? "29px"
+        : "32px"};
+      line-height: auto;
+      letter-spacing: 0%;
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    span {
+      font-family: "Jost", sans-serif;
+      font-size: ${isMobile
+        ? "24px"
+        : isTablet
+        ? "24px"
+        : isDesktop
+        ? "24px"
+        : "26px"};
+      line-height: auto;
+      letter-spacing: 0%;
+      text-align: center;
+      margin-top: 24px;
+      width: 100%;
+    }
+  `;
+
   return (
-    <Container>
+    <Container ref={ref}>
       <Card>
         <img src="/images/home/missao.png" alt="Missão" />
         <div></div>
@@ -38,66 +165,6 @@ export default function HomeCards() {
       </Card>
     </Container>
   );
-}
+});
 
-const Container = styled(Box)`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 78px;
-  margin-bottom: 105px;
-`;
-
-const Card = styled(Box)`
-  display: flex;
-  flex-direction: column;
-  padding-inline: 24px;
-  padding-top: 84px;
-  padding-bottom: 42px;
-  border-radius: 32px;
-  background-color: #f6f6f6;
-  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
-  max-width: 474px;
-  width: auto;
-  max-height: 616px;
-  height: auto;
-  cursor: pointer;
-
-  :hover {
-    scale: 1.1;
-  }
-
-  img {
-    margin-inline: auto;
-    margin-bottom: 32px;
-  }
-
-  div {
-    margin-inline: auto;
-    max-width: 299px;
-    width: 100%;
-    height: 4px;
-    background-color: #ffe500;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  h1 {
-    font-family: "JostSemiBold", sans-serif;
-    font-size: 32px;
-    line-height: auto;
-    letter-spacing: 0%;
-    text-align: center;
-    margin-top: 48px;
-  }
-
-  span {
-    font-family: "Jost", sans-serif;
-    font-size: 26px;
-    line-height: auto;
-    letter-spacing: 0%;
-    text-align: center;
-    margin-top: 24px;
-    width: 100%;
-  }
-`;
+export default HomeCards;
