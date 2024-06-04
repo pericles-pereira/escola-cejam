@@ -130,12 +130,13 @@ const Cursos = forwardRef((props, ref) => {
         <h1>Novidades em Breve</h1>
         <div>
           <img src="/images/home/courses-img1.png" alt="Cursos - Imagem 1" />
-          <img src="/images/home/courses-img2.png" alt="Cursos - Imagem 2" />
+          {!isMobile && (
+            <img src="/images/home/courses-img2.png" alt="Cursos - Imagem 2" />
+          )}
         </div>
       </div>
     </Container>
   );
-})
+});
 
 export default Cursos;
-

@@ -23,14 +23,14 @@ export default function GuestLayout({
       ? "28px"
       : "69px"};
     padding-left: ${isMobile
-      ? "26px"
+      ? "16px"
       : isTablet
       ? "28px"
       : isDesktop
       ? "30px"
       : "54px"};
     padding-right: ${isMobile
-      ? "26px"
+      ? "16px"
       : isTablet
       ? "28px"
       : isDesktop
@@ -58,8 +58,8 @@ export default function GuestLayout({
       : "155px"};
     height: auto;
     width: 100%;
-    padding-top: ${isMobile ? "40px" : "0px"};
-    padding-bottom: ${isMobile ? "70px" : "0px"};
+    padding-top: ${isMobile ? "80px" : "0px"};
+    padding-bottom: ${isMobile ? "90px" : "0px"};
     border-bottom: 2px solid #164174;
 
     img {
@@ -96,7 +96,7 @@ export default function GuestLayout({
     flex-direction: row;
     flex-wrap: ${isMobile ? "wrap" : "nowrap"};
     justify-content: center;
-    gap: ${isMobile ? "14px" : isTablet ? "16px" : isDesktop ? "18px" : "44px"};
+    gap: ${isMobile ? "8px" : isTablet ? "16px" : isDesktop ? "18px" : "44px"};
     margin-right: ${isMobile
       ? "0px"
       : isTablet
