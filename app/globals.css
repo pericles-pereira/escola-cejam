@@ -1,0 +1,203 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    @font-face {
+        font-family: "Jost";
+        src: url("../src/static/fonts/Jost/Jost-Regular.ttf") format("truetype");
+    }
+
+    @font-face {
+        font-family: "JostMedium";
+        src: url("../src/static/fonts/Jost/Jost-Medium.ttf") format("truetype");
+    }
+
+    @font-face {
+        font-family: "JostSemiBold";
+        src: url("../src/static/fonts/Jost/Jost-SemiBold.ttf") format("truetype");
+    }
+
+    @font-face {
+        font-family: "JostBold";
+        src: url("../src/static/fonts/Jost/Jost-Bold.ttf") format("truetype");
+    }
+
+    * {
+        font-family: "Jost", sans-serif;
+    }
+
+}
+
+input:focus:not(:placeholder-shown) {
+    outline: none;
+    box-shadow: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus-visible {
+    outline: 2px solid var(--azul);
+    outline-offset: 2px;
+}
+
+input::placeholder {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+textarea::placeholder {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+textarea {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.p-carousel .p-carousel-indicators {
+    padding: 1rem;
+}
+.p-carousel .p-carousel-indicators .p-carousel-indicator {
+    margin-right: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+.p-carousel .p-carousel-indicators .p-carousel-indicator button {
+    background-color: #ced4da;
+    width: 20px;
+    height: 5px;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+    border-radius: 2.5px;
+}
+.p-carousel .p-carousel-indicators .p-carousel-indicator button:hover {
+    background: #818c96;
+}
+.p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+    background: black;
+    color: #4338ca;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol,
+ul {
+    list-style: none;
+}
+blockquote,
+q {
+    quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: "";
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
