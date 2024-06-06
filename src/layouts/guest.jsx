@@ -229,28 +229,28 @@ export default function GuestLayout({
           <span className="mb-3.5">Redes Sociais</span>
           <FooterActionsContainer>
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/escoladesaude.cejam?mibextid=LQQJ4d"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src="/images/social-media/facebook.png" alt="Facebook" />
             </a>
             <a
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/escolacejam?igsh=MXIyMGpudmlwY2VodA=="
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src="/images/social-media/instagram.png" alt="Instagram" />
             </a>
             <a
-              href="https://www.youtube.com/"
+              href="https://youtube.com/@escolacejam?si=3v1Mbe_x9O6hl-ux"
               target="_blank"
               rel="noopener noreferrer"
             >
               <img src="/images/social-media/youtube.png" alt="Youtube" />
             </a>
             <a
-              href="https://www.whatsapp.com/"
+              href="https://api.whatsapp.com/send?phone=21890799"
               target="_blank"
               rel="noopener noreferrer"
             >

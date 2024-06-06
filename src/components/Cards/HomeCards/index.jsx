@@ -65,7 +65,7 @@ const HomeCards = forwardRef((props, ref) => {
     background-color: #f6f6f6;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
     max-width: ${isMobile
-      ? "374px"
+      ? "320px"
       : isTablet
       ? "374px"
       : isDesktop
@@ -102,7 +102,7 @@ const HomeCards = forwardRef((props, ref) => {
     h1 {
       font-family: "JostSemiBold", sans-serif;
       font-size: ${isMobile
-        ? "29px"
+        ? "26px"
         : isTablet
         ? "29px"
         : isDesktop
@@ -117,7 +117,7 @@ const HomeCards = forwardRef((props, ref) => {
     span {
       font-family: "Jost", sans-serif;
       font-size: ${isMobile
-        ? "24px"
+        ? "20px"
         : isTablet
         ? "24px"
         : isDesktop
